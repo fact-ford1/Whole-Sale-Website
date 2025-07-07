@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Admin Panel - Goford Enterprise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="admin-container">
+    <h1>Admin Panel</h1>
+    <div id="admin-login">
+      <input type="password" id="admin-password" placeholder="Enter admin password" />
+      <button onclick="adminLogin()">Login</button>
+      <div id="login-error" style="color:red;display:none;">Incorrect password.</div>
+    </div>
+    <div id="admin-panel" style="display:none;">
+      <h2>Manage Products</h2>
+      <form id="add-product-form">
+        <input type="text" name="name" placeholder="Product Name" required />
+        <input type="number" name="price" placeholder="Price" required />
+        <input type="number" name="stock" placeholder="Stock" required />
+        <input type="file" name="image" accept="image/*" required />
+        <button type="submit">Add Product</button>
+      </form>
+      <div id="admin-products-list">
+        <!-- JS will inject editable product list here -->
+      </div>
+      <h2>User Messages</h2>
+      <div id="admin-messages-list">
+        <!-- JS will inject messages here -->
+      </div>
+      <button onclick="adminLogout()">Logout</button>
+      <!-- Example for social icons -->
+      <span class="admin-social-icon">
+        <img src="icons/whatsapp.svg" alt="WhatsApp" width="24" height="24" />
+      </span>
+      <span class="admin-social-icon">
+        <img src="icons/facebook.svg" alt="Facebook" width="24" height="24" />
+      </span>
+      <span class="admin-social-icon">
+        <img src="icons/instagram.svg" alt="Instagram" width="24" height="24" />
+      </span>
+    </div>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Goford Enterprise - Phones & Accessories</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.png" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header-main">
+    <div class="header-inner">
+      <div class="header-brand">
+        <img src="images/logo.png" alt="Goford Enterprise" />
+        Goford Enterprise
+      </div>
+      <nav class="header-nav">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="product.html" class="nav-link">Products</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-whatsapp-btn" href="https://wa.me/233257441162" target="_blank">Chat with us on WhatsApp</a>
+      </div>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero hero-large-bg">
+    <div class="hero-content hero-content-centered">
+      <h1>Affordable & Quality Phones and Accessories</h1>
+      <p>Shop trusted gadgets, fast delivery, and excellent service.</p>
+      <a href="#products" class="explore-btn">Explore Products</a>
+    </div>
+  </section>
+  <!-- Product Slider Section -->
+  <section class="slider-section">
+    <div class="product-slider" id="product-slider">
+      <!-- JS will inject slider cards here -->
+    </div>
+    <div class="slider-controls">
+      <button id="slider-prev" aria-label="Previous">&#8592;</button>
+      <button id="slider-next" aria-label="Next">&#8594;</button>
+    </div>
+  </section>
+  <!-- About Us Section -->
+  <section id="about" class="aboutus-fullscreen">
+    <div class="aboutus-container">
+      <div class="aboutus-card">
+        <h2>About Us</h2>
+        <p>
+          Goford Enterprise is dedicated to providing the latest phones and accessories to customers across Ghana. We pride ourselves on trust, transparency, and customer satisfaction.
+        </p>
+      </div>
+      <div class="aboutus-card">
+        <h2>What We Do</h2>
+        <p>
+          We source, stock, and deliver genuine smartphones and accessories. Our team ensures every product is tested and meets high standards before reaching you.
+        </p>
+      </div>
+      <div class="aboutus-card">
+        <h2>What We Offer</h2>
+        <p>
+          From flagship phones to essential accessories, we offer a wide range of products to suit every need and budget. Our catalog is always up-to-date with the latest tech.
+        </p>
+      </div>
+      <div class="aboutus-card">
+        <h2>Quality & Authenticity</h2>
+        <p>
+          All our products are 100% original and come with warranty. We guarantee quality and durability, so you can shop with confidence.
+        </p>
+      </div>
+      <div class="aboutus-card">
+        <h2>Affordability</h2>
+        <p>
+          We believe everyone deserves access to quality gadgets. Our prices are competitive and transparent, with no hidden fees.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Product Section -->
+  <section id="products" class="products-section products-section-fullscreen">
+    <h2>Our Products</h2>
+    <div class="products-grid products-grid-fullscreen" id="products-grid">
+      <!-- JS will inject product cards here -->
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section contact-section-wide">
+    <div class="contact-content-wrap">
+      <div class="contact-form-card">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <div id="contact-success" style="display:none;">Thank you! Message sent.</div>
+      </div>
+      <div class="reviews-card">
+        <h2>Product Reviews</h2>
+        <div class="review-list">
+          <div class="review-item">
+            <div class="review-rating">★★★★★</div>
+            <div class="review-text">"The iPhone 13 Pro I bought was authentic and the delivery was super fast!"</div>
+            <div class="review-author">- Ama, Accra</div>
+          </div>
+          <div class="review-item">
+            <div class="review-rating">★★★★☆</div>
+            <div class="review-text">"Oraimo Power Bank lasts long. Great customer service."</div>
+            <div class="review-author">- Kwame, Cape Coast</div>
+          </div>
+          <div class="review-item">
+            <div class="review-rating">★★★★★</div>
+            <div class="review-text">"Best prices for Samsung phones. Highly recommended."</div>
+            <div class="review-author">- Efua, Takoradi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer-harvard">
+    <div class="footer-harvard-inner">
+      <div class="footer-harvard-col footer-harvard-brand">
+        <img src="images/logo.png" alt="Goford Enterprise" width="64" height="64" />
+        <div class="footer-harvard-company">Goford Enterprise</div>
+      </div>
+      <div class="footer-harvard-col footer-harvard-links">
+        <a href="#" class="footer-link">Home</a>
+        <a href="#about" class="footer-link">About</a>
+        <a href="#products" class="footer-link">Products</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
+      <div class="footer-harvard-col footer-harvard-contact">
+        <div class="footer-harvard-contact-row">
+          <!-- Phone SVG -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92V21a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3 5.18 2 2 0 0 1 5 3h4.09a1 1 0 0 1 1 .75l1.13 4.52a1 1 0 0 1-.29 1L9.91 11.09a16 16 0 0 0 6 6l1.82-1.82a1 1 0 0 1 1-.29l4.52 1.13a1 1 0 0 1 .75 1z"/></svg>
+          </span>
+          <span class="footer-harvard-contact-label">Phone:</span>
+          <a href="tel:0257441162">0257441162</a>
+        </div>
+        <div class="footer-harvard-contact-row">
+          <!-- Email SVG -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          </span>
+          <span class="footer-harvard-contact-label">Email:</span>
+          <a href="mailto:godsonkumieboarthur@gmail.com">godsonkumieboarthur@gmail.com</a>
+        </div>
+        <div class="footer-harvard-contact-row">
+          <!-- Location SVG -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M12 21C12 21 4 13.5 4 8.5A8 8 0 0 1 20 8.5C20 13.5 12 21 12 21Z"/>
+              <circle cx="12" cy="8.5" r="3"/>
+            </svg>
+          </span>
+          <span class="footer-harvard-contact-label">Location:</span>
+          <span>Mumford, Gomoa West, Central Region, Ghana</span>
+        </div>
+        <!-- <div class="footer-harvard-social"> -->
+        <div class="footer-harvard-contact-row">
+            <!-- WhatsApp SVG Icon -->
+            <span class="footer-harvard-icon">
+              <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M16.24 7.76a6 6 0 0 1 0 8.48"/>
+                <path d="M9.17 9.17a4 4 0 0 1 5.66 5.66"/>
+              </svg>
+            </span>
+            <span class="footer-social-label">WhatsApp</span>
+          </div>
+          <div class="footer-harvard-contact-row">
+            <!-- Facebook SVG Icon -->
+            <span class="footer-harvard-icon">
+              <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <path d="M16 8h-2a2 2 0 0 0-2 2v2h4"/>
+              </svg>
+            </span>
+            <span class="footer-social-label">Facebook</span>
+          </div>
+          <div class="footer-harvard-contact-row">
+            <!-- Instagram SVG Icon -->
+            <span class="footer-harvard-icon">
+              <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="3.5"/>
+                <circle cx="17.5" cy="6.5" r="1"/>
+              </svg>
+            </span>
+            <span class="footer-social-label">Instagram</span>
+          </div>
+        </div>
+      <!-- </div> -->
+    </div>
+    <div class="footer-harvard-bottom">
+      <span>© 2025 Goford Enterprise. All rights reserved.</span>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

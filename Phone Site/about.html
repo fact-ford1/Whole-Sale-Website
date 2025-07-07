@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>About Us - Goford Enterprise</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.png" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #f8fafc 60%, #e0e7ef 100%);
+      color: #222;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("images/phones.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: relative;
+      min-height: 100vh;
+    }
+    /* Overlay for background image (shadow only on background) */
+    .background-overlay {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(30, 41, 59, 0.45);
+      z-index: 0;
+      pointer-events: none;
+    }
+    .about-hero,
+    .about-hero *,
+    .about-main-section,
+    .about-main-section *,
+    .footer-harvard,
+    .footer-harvard * {
+      position: relative;
+      z-index: 1;
+    }
+    .about-hero {
+      background: linear-gradient(120deg, #2563eb 60%, #60a5fa 100%);
+      color: #fff;
+      padding: 80px 0 70px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .about-hero-content {
+      max-width: 700px;
+      margin: 0 auto;
+      z-index: 2;
+      position: relative;
+    }
+    .about-hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+      letter-spacing: -1px;
+      line-height: 1.1;
+    }
+    .about-hero p {
+      font-size: 1.35rem;
+      margin-bottom: 0;
+      font-weight: 400;
+      opacity: 0.96;
+      line-height: 1.6;
+    }
+    .about-main-section {
+      max-width: 950px;
+      margin: -40px auto 0 auto;
+      background: rgba(255,255,255,0.82);
+      border-radius: 20px;
+      box-shadow: 0 12px 40px rgba(30,41,59,0.22), 0 2px 12px rgba(30,41,59,0.13);
+      padding: 56px 44px 44px 44px;
+      position: relative;
+      z-index: 2;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1.5px solid rgba(37,99,235,0.10);
+    }
+    .about-section {
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .about-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .about-section h2 {
+      color: #2563eb;
+      font-size: 1.65rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .about-section p, .about-section ul {
+      font-size: 1.18rem;
+      line-height: 1.8;
+      color: #222;
+      margin: 0 0 10px 0;
+    }
+    .about-section ul {
+      padding-left: 24px;
+    }
+    .branches-list {
+      margin: 0;
+      padding-left: 24px;
+    }
+    @media (max-width: 700px) {
+      .about-main-section {
+        padding: 18px 4vw;
+      }
+      .about-hero h1 {
+        font-size: 2rem;
+      }
+      .about-hero p {
+        font-size: 1.05rem;
+      }
+      .about-section h2 {
+        font-size: 1.15rem;
+      }
+      .about-section p, .about-section ul {
+        font-size: 1rem;
+      }
+    }
+    /* Decorative shapes for hero */
+    .about-hero-bgshape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.13;
+      z-index: 1;
+    }
+    .about-hero-bgshape.one {
+      width: 320px; height: 320px;
+      background: #fff;
+      top: -80px; left: -100px;
+    }
+    .about-hero-bgshape.two {
+      width: 180px; height: 180px;
+      background: #fff;
+      bottom: -60px; right: -60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-overlay"></div>
+  <!-- Header/Navbar -->
+  <header class="header-main">
+    <div class="header-inner">
+      <div class="header-brand">
+        <img src="images/logo.png" alt="Goford Enterprise" />
+        Goford Enterprise
+      </div>
+      <nav class="header-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="product.html" class="nav-link">Products</a>
+        <a href="about.html" class="nav-link active" >About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-whatsapp-btn" href="https://wa.me/233257441162" target="_blank">Chat with us on WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="about-hero-bgshape one"></div>
+    <div class="about-hero-bgshape two"></div>
+    <div class="about-hero-content">
+      <h1>About Goford Enterprise</h1>
+      <p>
+        Trusted in Ghana for authentic phones and accessories.<br>
+        Discover our story, values, and why you should choose us.
+      </p>
+    </div>
+  </section>
+
+  <main>
+    <section class="about-main-section">
+      <div class="about-section">
+        <h2>Who We Are</h2>
+        <p>
+          Goford Enterprise is a trusted Ghanaian business specializing in the sale and distribution of quality smartphones and accessories. We are committed to delivering authentic products and exceptional customer service to clients across Ghana.
+        </p>
+      </div>
+      <div class="about-section">
+        <h2>What We Do</h2>
+        <p>
+          We source, stock, and deliver a wide range of genuine smartphones, tablets, and accessories from leading brands. Our team ensures every product is tested for quality and authenticity before it reaches you.
+        </p>
+        <ul>
+          <li>Latest smartphones and gadgets</li>
+          <li>Original accessories (chargers, cases, power banks, etc.)</li>
+          <li>Fast and reliable delivery nationwide</li>
+          <li>After-sales support and warranty</li>
+        </ul>
+      </div>
+      <div class="about-section">
+        <h2>Why We Do It</h2>
+        <p>
+          We believe everyone deserves access to the best technology at fair prices. Our mission is to bridge the gap between global tech trends and local needs, making quality gadgets accessible and affordable for all.
+        </p>
+      </div>
+      <div class="about-section">
+        <h2>Why Choose Goford Enterprise?</h2>
+        <ul>
+          <li><strong>Authenticity Guaranteed:</strong> All products are 100% original and come with warranty.</li>
+          <li><strong>Competitive Pricing:</strong> Transparent and fair prices with no hidden fees.</li>
+          <li><strong>Customer Satisfaction:</strong> We prioritize your happiness and provide excellent support.</li>
+          <li><strong>Trusted by Many:</strong> Our reputation is built on trust, transparency, and reliability.</li>
+        </ul>
+      </div>
+      <div class="about-section">
+        <h2>Where to Find Us</h2>
+        <p>
+          <strong>Head Office:</strong> Mumford, Gomoa West, Central Region, Ghana
+        </p>
+        <p>
+          <strong>Contact:</strong> <a href="tel:0257441162" style="color:#2563eb;">0257441162</a> &nbsp;|&nbsp;
+          <a href="mailto:godsonkumieboarthur@gmail.com" style="color:#2563eb;">godsonkumieboarthur@gmail.com</a>
+        </p>
+      </div>
+      <div class="about-section">
+        <h2>Our Branches</h2>
+        <ul class="branches-list">
+          <li>Mumford (Head Office) - Gomoa West, Central Region</li>
+          <li>Accra Branch - Accra Central, Greater Accra Region</li>
+          <li>Takoradi Branch - Market Circle, Western Region</li>
+          <li>Cape Coast Branch - Kotokuraba, Central Region</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-harvard">
+    <div class="footer-harvard-inner">
+      <div class="footer-harvard-col footer-harvard-brand">
+        <img src="images/logo.png" alt="Goford Enterprise" width="64" height="64" />
+        <div class="footer-harvard-company">Goford Enterprise</div>
+      </div>
+      <div class="footer-harvard-col footer-harvard-links">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a href="product.html" class="footer-link">Products</a>
+        <a href="index.html#contact" class="footer-link">Contact</a>
+      </div>
+      <div class="footer-harvard-col footer-harvard-contact">
+        <div class="footer-harvard-contact-row">
+          <!-- Phone SVG -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92V21a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3 5.18 2 2 0 0 1 5 3h4.09a1 1 0 0 1 1 .75l1.13 4.52a1 1 0 0 1-.29 1L9.91 11.09a16 16 0 0 0 6 6l1.82-1.82a1 1 0 0 1 1-.29l4.52 1.13a1 1 0 0 1 .75 1z"/></svg>
+          </span>
+          <span class="footer-harvard-contact-label">Phone:</span>
+          <a href="tel:0257441162">0257441162</a>
+        </div>
+        <div class="footer-harvard-contact-row">
+          <!-- Email SVG -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          </span>
+          <span class="footer-harvard-contact-label">Email:</span>
+          <a href="mailto:godsonkumieboarthur@gmail.com">godsonkumieboarthur@gmail.com</a>
+        </div>
+        <div class="footer-harvard-contact-row">
+          <!-- Location SVG -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M12 21C12 21 4 13.5 4 8.5A8 8 0 0 1 20 8.5C20 13.5 12 21 12 21Z"/>
+              <circle cx="12" cy="8.5" r="3"/>
+            </svg>
+          </span>
+          <span class="footer-harvard-contact-label">Location:</span>
+          <span>Mumford, Gomoa West, Central Region, Ghana</span>
+        </div>
+        <div class="footer-harvard-contact-row">
+          <!-- WhatsApp SVG Icon -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M16.24 7.76a6 6 0 0 1 0 8.48"/>
+              <path d="M9.17 9.17a4 4 0 0 1 5.66 5.66"/>
+            </svg>
+          </span>
+          <span class="footer-social-label">WhatsApp</span>
+        </div>
+        <div class="footer-harvard-contact-row">
+          <!-- Facebook SVG Icon -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <path d="M16 8h-2a2 2 0 0 0-2 2v2h4"/>
+            </svg>
+          </span>
+          <span class="footer-social-label">Facebook</span>
+        </div>
+        <div class="footer-harvard-contact-row">
+          <!-- Instagram SVG Icon -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="3.5"/>
+              <circle cx="17.5" cy="6.5" r="1"/>
+            </svg>
+          </span>
+          <span class="footer-social-label">Instagram</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-harvard-bottom">
+      <span>© 2025 Goford Enterprise. All rights reserved.</span>
+    </div>
+  </footer>
+</body>
+</html>

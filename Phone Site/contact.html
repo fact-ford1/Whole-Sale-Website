@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Contact Us - Goford Enterprise</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.png" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #f8fafc 60%, #e0e7ef 100%);
+      color: #222;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("images/phones.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      min-height: 100vh;
+      position: relative;
+    }
+    .background-overlay {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(30, 41, 59, 0.45);
+      z-index: 0;
+      pointer-events: none;
+    }
+    .contact-main-section {
+      max-width: 1100px;
+      margin: 60px auto 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+    .contact-card, .reviews-card {
+      background: rgba(255,255,255,0.78);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(30,41,59,0.18), 0 1.5px 8px rgba(30,41,59,0.10);
+      padding: 38px 32px 32px 32px;
+      min-width: 320px;
+      max-width: 420px;
+      flex: 1 1 340px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1.5px solid rgba(37,99,235,0.10);
+      margin-bottom: 30px;
+    }
+    .contact-card h2, .reviews-card h2 {
+      color: #2563eb;
+      font-size: 1.7rem;
+      margin-bottom: 18px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      text-align: center;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1.08rem;
+      background: rgba(255,255,255,0.85);
+      color: #222;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .contact-form textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      border: 1.5px solid #2563eb;
+    }
+    .contact-form button {
+      width: 100%;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 0;
+      font-size: 1.13rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .contact-form button:hover {
+      background: #1746a2;
+    }
+    .contact-success {
+      color: #16a34a;
+      text-align: center;
+      margin-top: 10px;
+      font-weight: 600;
+      display: none;
+    }
+    .reviews-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .review-item {
+      background: rgba(243,246,255,0.85);
+      border-radius: 12px;
+      padding: 18px 16px 12px 16px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 8px rgba(37,99,235,0.06);
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+    }
+    .review-rating {
+      color: #fbbf24;
+      font-size: 1.25rem;
+      margin-bottom: 4px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .review-text {
+      font-size: 1.08rem;
+      color: #222;
+      margin-bottom: 6px;
+    }
+    .review-author {
+      font-size: 0.98rem;
+      color: #2563eb;
+      font-style: italic;
+      text-align: right;
+    }
+    @media (max-width: 900px) {
+      .contact-main-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+      }
+      .contact-card, .reviews-card {
+        max-width: 98vw;
+        min-width: unset;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background-overlay"></div>
+  <!-- Header/Navbar -->
+  <header class="header-main">
+    <div class="header-inner">
+      <div class="header-brand">
+        <img src="images/logo.png" alt="Goford Enterprise" />
+        Goford Enterprise
+      </div>
+      <nav class="header-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="product.html" class="nav-link">Products</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-whatsapp-btn" href="https://wa.me/233257441162" target="_blank">Chat with us on WhatsApp</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="contact-main-section">
+      <div class="contact-card">
+        <h2>Send Us a Message</h2>
+        <form class="contact-form" id="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-success" id="contact-success">Thank you! Your message has been sent.</div>
+      </div>
+      <div class="reviews-card">
+        <h2>Product Reviews</h2>
+        <ul class="reviews-list">
+          <li class="review-item">
+            <div class="review-rating">★★★★★</div>
+            <div class="review-text">"The iPhone 13 Pro I bought was authentic and the delivery was super fast!"</div>
+            <div class="review-author">- Ama, Accra</div>
+          </li>
+          <li class="review-item">
+            <div class="review-rating">★★★★☆</div>
+            <div class="review-text">"Oraimo Power Bank lasts long. Great customer service."</div>
+            <div class="review-author">- Kwame, Cape Coast</div>
+          </li>
+          <li class="review-item">
+            <div class="review-rating">★★★★★</div>
+            <div class="review-text">"Best prices for Samsung phones. Highly recommended."</div>
+            <div class="review-author">- Efua, Takoradi</div>
+          </li>
+          <li class="review-item">
+            <div class="review-rating">★★★★★</div>
+            <div class="review-text">"Very responsive support and genuine accessories."</div>
+            <div class="review-author">- Kojo, Kumasi</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="footer-harvard">
+    <div class="footer-harvard-inner">
+      <div class="footer-harvard-col footer-harvard-brand">
+        <img src="images/logo.png" alt="Goford Enterprise" width="64" height="64" />
+        <div class="footer-harvard-company">Goford Enterprise</div>
+      </div>
+      <div class="footer-harvard-col footer-harvard-links">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a href="product.html" class="footer-link">Products</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+      <div class="footer-harvard-col footer-harvard-contact">
+        <div class="footer-harvard-contact-row">
+          <!-- Phone SVG -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92V21a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3 5.18 2 2 0 0 1 5 3h4.09a1 1 0 0 1 1 .75l1.13 4.52a1 1 0 0 1-.29 1L9.91 11.09a16 16 0 0 0 6 6l1.82-1.82a1 1 0 0 1 1-.29l4.52 1.13a1 1 0 0 1 .75 1z"/></svg>
+          </span>
+          <span class="footer-harvard-contact-label">Phone:</span>
+          <a href="tel:0257441162">0257441162</a>
+        </div>
+        <div class="footer-harvard-contact-row">
+          <!-- Email SVG -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          </span>
+          <span class="footer-harvard-contact-label">Email:</span>
+          <a href="mailto:godsonkumieboarthur@gmail.com">godsonkumieboarthur@gmail.com</a>
+        </div>
+        <div class="footer-harvard-contact-row">
+          <!-- Location SVG -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M12 21C12 21 4 13.5 4 8.5A8 8 0 0 1 20 8.5C20 13.5 12 21 12 21Z"/>
+              <circle cx="12" cy="8.5" r="3"/>
+            </svg>
+          </span>
+          <span class="footer-harvard-contact-label">Location:</span>
+          <span>Mumford, Gomoa West, Central Region, Ghana</span>
+        </div>
+        <div class="footer-harvard-contact-row">
+          <!-- WhatsApp SVG Icon -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M16.24 7.76a6 6 0 0 1 0 8.48"/>
+              <path d="M9.17 9.17a4 4 0 0 1 5.66 5.66"/>
+            </svg>
+          </span>
+          <span class="footer-social-label">WhatsApp</span>
+        </div>
+        <div class="footer-harvard-contact-row">
+          <!-- Facebook SVG Icon -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <path d="M16 8h-2a2 2 0 0 0-2 2v2h4"/>
+            </svg>
+          </span>
+          <span class="footer-social-label">Facebook</span>
+        </div>
+        <div class="footer-harvard-contact-row">
+          <!-- Instagram SVG Icon -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="3.5"/>
+              <circle cx="17.5" cy="6.5" r="1"/>
+            </svg>
+          </span>
+          <span class="footer-social-label">Instagram</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-harvard-bottom">
+      <span>© 2025 Goford Enterprise. All rights reserved.</span>
+    </div>
+  </footer>
+  <script>
+    // Simple form handler for demo (no backend)
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('contact-success').style.display = 'block';
+      this.reset();
+    });
+  </script>
+</body>
+</html>

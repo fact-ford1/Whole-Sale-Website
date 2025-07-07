@@ -1,0 +1,56 @@
+[
+	{
+		"name": "iPhone 13 Pro",
+		"price": 6500,
+		"stock": 3,
+		"image": "images/phones.jpg"
+	},
+	{
+		"name": "Samsung Galaxy S22",
+		"price": 5200,
+		"stock": 7,
+		"image": "images/single-phone.jpg"
+	},
+	{
+		"name": "Oraimo Power Bank 20000mAh",
+		"price": 250,
+		"stock": 0,
+		"image": "images/phone1.jpg"
+	},
+	{
+		"name": "iPhone 13 Pro",
+		"price": 6500,
+		"stock": 0,
+		"image": "images/multi-phones.jpg"
+	},
+	{
+		"name": "Samsung Galaxy S22",
+		"price": 5200,
+		"stock": 7,
+		"image": "images/phone2.jpg"
+	},
+	{
+		"name": "Oraimo Power Bank 20000mAh",
+		"price": 250,
+		"stock": 0,
+		"image": "images/phone3.jpg"
+	},
+	{
+		"name": "Samsung Galaxy S22",
+		"price": 5200,
+		"stock": 7,
+		"image": "images/phone4.jpg"
+	},
+	{
+		"name": "Oraimo Power Bank 20000mAh",
+		"price": 250,
+		"stock": 0,
+		"image": "images/phone5.jpg"
+	},
+	{
+		"name": "iPhone 13 Pro",
+		"price": 6500,
+		"stock": 3,
+		"image": "images/phone6.jpg"
+	}
+]

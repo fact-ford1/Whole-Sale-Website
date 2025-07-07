@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Products - Goford Enterprise</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/logo.png" />
+  <style>
+    body.products-bg {
+      background: linear-gradient(135deg, rgba(30,40,80,0.65) 0%, rgba(30,40,80,0.45) 100%), url('images/phones.jpg') center top/cover no-repeat;
+      min-height: 100vh;
+    }
+    .products-shadow-top {
+      width: 100vw;
+      height: 120px;
+      position: absolute;
+      top: 0; left: 0;
+      background: linear-gradient(to bottom, rgba(30,40,80,0.7) 0%, rgba(30,40,80,0.05) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .products-main-content {
+      position: relative;
+      z-index: 2;
+      padding-top: 60px;
+      padding-bottom: 40px;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .products-title {
+      color: #fff;
+      font-size: 2.7rem;
+      font-weight: 900;
+      margin: 2.5rem 0 1.5rem 0;
+      text-shadow: 0 4px 24px #1e293bcc, 0 1px 0 #000a;
+      letter-spacing: 1.5px;
+      text-align: center;
+    }
+    .products-grid-page {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      width: 100%;
+      max-width: 1300px;
+      justify-content: center;
+      align-items: stretch;
+      margin: 0 auto;
+    }
+    .product-card {
+      background: var(--blue-card);
+      border: 1px solid var(--blue-card-border);
+      border-radius: 16px;
+      box-shadow: var(--blue-shadow);
+      width: 260px;
+      padding: 1.3rem 1rem 1.2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s, transform 0.2s;
+      margin-bottom: 1.2rem;
+    }
+    .product-card:hover {
+      box-shadow: 0 4px 24px #2563eb44;
+      transform: translateY(-4px) scale(1.03);
+    }
+    .product-img-wrap {
+      width: 100%;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 0.7rem;
+      background: #eaf2fb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .product-card .name {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: var(--blue-accent-dark);
+      text-align: center;
+    }
+    .product-card .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: var(--blue-accent);
+      text-align: center;
+    }
+    .product-card .stock {
+      font-size: 0.98rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    .product-card .stock.in { color: var(--blue-stock-in); }
+    .product-card .stock.low { color: var(--blue-stock-low); }
+    .product-card .stock.out { color: var(--blue-stock-out); text-decoration: line-through; }
+    @media (max-width: 900px) {
+      .products-title { font-size: 1.7rem; }
+      .products-grid-page { gap: 1.2rem; }
+      .product-card { width: 95vw; max-width: 320px; }
+    }
+    @media (max-width: 600px) {
+      .products-title { font-size: 1.2rem; }
+      .products-main-content { padding-top: 30px; }
+      .products-grid-page { gap: 0.7rem; }
+      .product-card { width: 97vw; max-width: 99vw; }
+    }
+  </style>
+</head>
+<body class="products-bg">
+  <div class="products-shadow-top"></div>
+  <!-- Header/Navbar (same as home) -->
+  <header class="header-main">
+    <div class="header-inner">
+      <div class="header-brand">
+        <img src="images/logo.png" alt="Goford Enterprise" />
+        Goford Enterprise
+      </div>
+      <nav class="header-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="product.html" class="nav-link active">Products</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-whatsapp-btn" href="https://wa.me/233257441162" target="_blank">Chat with us on WhatsApp</a>
+      </div>
+    </div>
+  </header>
+  <main class="products-main-content">
+    <div class="products-title">Our Products</div>
+    <div class="products-grid-page" id="products-grid-page">
+      <!-- JS will inject product cards here -->
+    </div>
+  </main>
+  <!-- Footer (same as home) -->
+  <footer class="footer-harvard">
+    <div class="footer-harvard-inner">
+      <div class="footer-harvard-col footer-harvard-brand">
+        <img src="images/logo.png" alt="Goford Enterprise" width="64" height="64" />
+        <div class="footer-harvard-company">Goford Enterprise</div>
+      </div>
+      <div class="footer-harvard-col footer-harvard-links">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="product.html" class="footer-link active">Products</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+      <div class="footer-harvard-col footer-harvard-contact">
+        <div class="footer-harvard-contact-row">
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92V21a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3 5.18 2 2 0 0 1 5 3h4.09a1 1 0 0 1 1 .75l1.13 4.52a1 1 0 0 1-.29 1L9.91 11.09a16 16 0 0 0 6 6l1.82-1.82a1 1 0 0 1 1-.29l4.52 1.13a1 1 0 0 1 .75 1z"/></svg>
+          </span>
+          <!-- <img src="icons/phone-call.svg" alt="Phone" width="25" height="25" class="footer-harvard-icon" /> -->
+          <span class="footer-harvard-contact-label">Phone:</span>
+          <a href="tel:0257441162">0257441162</a>
+        </div>
+        <div class="footer-harvard-contact-row">
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          </span>
+          <!-- <img src="icons/email.svg" alt="Email" width="20" height="20" class="footer-harvard-icon" /> -->
+          <span class="footer-harvard-contact-label">Email:</span>
+          <a href="mailto:godsonkumieboarthur@gmail.com">godsonkumieboarthur@gmail.com</a>
+        </div>
+        <div class="footer-harvard-contact-row">
+
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 21C12 21 4 13.5 4 8.5A8 8 0 0 1 20 8.5C20 13.5 12 21 12 21Z"/><circle cx="12" cy="8.5" r="3"/></svg>
+          </span>
+          <!-- <img src="icons/location-dot.svg" alt="Location" width="16" height="16" class="footer-harvard-icon" /> -->
+          <span class="footer-harvard-contact-label">Location:</span>
+          <span>Mumford, Gomoa West, Central Region, Ghana</span>
+        </div>
+        <div class="footer-harvard-contact-row">
+          <!-- WhatsApp SVG Icon -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M16.24 7.76a6 6 0 0 1 0 8.48"/>
+              <path d="M9.17 9.17a4 4 0 0 1 5.66 5.66"/>
+            </svg>
+          </span>
+          <span class="footer-social-label">WhatsApp</span>
+        </div>
+        <div class="footer-harvard-contact-row">
+          <!-- Facebook SVG Icon -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <path d="M16 8h-2a2 2 0 0 0-2 2v2h4"/>
+            </svg>
+          </span>
+          <span class="footer-social-label">Facebook</span>
+        </div>
+        <div class="footer-harvard-contact-row">
+          <!-- Instagram SVG Icon -->
+          <span class="footer-harvard-icon">
+            <svg width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="3.5"/>
+              <circle cx="17.5" cy="6.5" r="1"/>
+            </svg>
+          </span>
+          <span class="footer-social-label">Instagram</span>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="footer-harvard-bottom">
+      <span>© 2025 Goford Enterprise. All rights reserved.</span>
+    </div>
+  </footer>
+  <script>
+    // Fetch and render products
+    async function loadProductsPage() {
+      // Use PHP API if available, fallback to JSON file
+      let products = [];
+      try {
+        const res = await fetch('api/admin-products.php?action=list');
+        products = await res.json();
+        if (!Array.isArray(products)) throw new Error();
+      } catch {
+        const res = await fetch('data/products.json');
+        products = await res.json();
+      }
+      renderProductsPage(products);
+    }
+    function renderProductsPage(products) {
+      const grid = document.getElementById('products-grid-page');
+      grid.innerHTML = '';
+      products.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <div class="product-img-wrap">
+            <img src="${p.image}" alt="${p.name}" />
+          </div>
+          <div class="name">${p.name}</div>
+          <div class="price ${p.stock === 0 ? 'stock out' : p.stock < 5 ? 'stock low' : 'stock in'}">
+            ${p.stock === 0 ? `<span class="stock out">Out of Stock</span> <span style="text-decoration:line-through;">₵${p.price}</span>` :
+              p.stock < 5 ? `<span class="stock low">Low Stock</span> <span style="background:#ffe06622;padding:2px 6px;border-radius:6px;">₵${p.price}</span>` :
+              `<span class="stock in">In Stock</span> <span style="color:#25d366;">₵${p.price}</span>`
+            }
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+    document.addEventListener('DOMContentLoaded', loadProductsPage);
+  </script>
+</body>
+</html>
